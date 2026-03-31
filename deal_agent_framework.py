@@ -67,6 +67,7 @@ class DealAgentFramework:
     def init_agent_as_needed(self):
         if not self.planner:
             self.log("Initializing Agent Framework...")
+            # Or choose AutonomousPlaningAgent for LLM decided tool-calling
             self.planner = DeterministicPlanningAgent(self.collection)
             self.log("Agent Framework is ready!")
 
